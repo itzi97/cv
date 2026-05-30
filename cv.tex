@@ -30,13 +30,13 @@
 \setlength{\parskip}{0pt}
 \setlength{\parindent}{0pt}
 
-% Section style — thin rule, small caps
+% Section style — thin rule, small caps, more breathing room
 \titleformat{\section}{\bfseries\scshape\normalsize}{}{0em}{}
   [\titlerule]
-\titlespacing{\section}{0pt}{5pt}{3pt}
+\titlespacing{\section}{0pt}{8pt}{4pt}
 
-% List style
-\setlist[itemize]{leftmargin=1em, itemsep=0pt, topsep=1pt, parsep=0pt}
+% List style — slightly more item separation
+\setlist[itemize]{leftmargin=1em, itemsep=2pt, topsep=2pt, parsep=0pt}
 
 % ─────────────────────────────────────────────────────────────────────────────
 \begin{document}
@@ -49,13 +49,17 @@
   \href{https://www.linkedin.com/in/itzi97}{linkedin.com/in/itzi97} \textbar\
   \href{https://www.kaggle.com/itzi97}{kaggle.com/itzi97}
 }
-\vspace{2pt}\hrule\vspace{4pt}
+\vspace{4pt}\hrule\vspace{6pt}
 
 % ── Summary ──────────────────────────────────────────────────────────────────
 {\small
-Data Engineering \& AI student (B.S.~Software Engineering, minor Data Science \& AI, U-tad, exp.\ 2027; GPA 8.05/10) with hands-on experience in Python data pipelines, SQL/NoSQL databases, big data processing (Hadoop, Spark), machine learning, and interactive data visualisation. Bilingual EN/ES (CEFR C2). Seeking a remote or hybrid part-time internship (\textasciitilde20~hrs/week) in Data Analytics, Data Engineering, or Applied AI.
+Data Engineering \& AI student (B.S.~Software Engineering, minor Data Science \& AI, U-tad, exp.\ 2027;
+GPA 8.05/10) with hands-on experience in Python data pipelines, SQL/NoSQL databases, big data processing
+(Hadoop, Spark/Scala), machine learning, and interactive data visualisation.
+Bilingual EN/ES (CEFR C2). Seeking a remote or hybrid part-time internship (\textasciitilde20~hrs/week)
+in Data Analytics, Data Engineering, or Applied AI.
 }
-\vspace{2pt}
+\vspace{4pt}
 
 % ── Technical Skills ─────────────────────────────────────────────────────────
 \section{Technical Skills}
@@ -64,12 +68,12 @@ Data Engineering \& AI student (B.S.~Software Engineering, minor Data Science \&
   \textbf{Languages} &
     Python, SQL, Go, Rust, JavaScript/Node.js, C/C++, Java, Scala, Bash \\
   \textbf{Data \& ML} &
-    pandas, NumPy, scikit-learn, TensorFlow/Keras, matplotlib, seaborn, Plotly,
-    Tableau, NLP, TF-IDF, CNN, transfer learning, feature engineering \\
+    pandas, NumPy, scikit-learn, TensorFlow/Keras, matplotlib, seaborn,
+    Plotly, ipywidgets, Tableau, NLP, TF-IDF, CNN, transfer learning, feature engineering \\
   \textbf{Big Data} &
-    Apache Hadoop, Apache Spark (PySpark), MapReduce, distributed data processing \\
+    Apache Hadoop, Apache Spark (Scala), MapReduce, distributed data processing \\
   \textbf{Databases} &
-    PostgreSQL, MongoDB, Redis, distributed query optimisation \\
+    PostgreSQL, MongoDB, Redis, Apache Cassandra, ChromaDB (vector store), distributed query optimisation \\
   \textbf{Infra \& DevOps} &
     Docker, Kubernetes, AWS (basics), Linux/NixOS, Git/GitHub \\
   \textbf{Other} &
@@ -83,19 +87,24 @@ Data Engineering \& AI student (B.S.~Software Engineering, minor Data Science \&
 \begin{itemize}
 
   \item \textbf{ML Classification Suite} --- \href{https://www.kaggle.com/itzi97}{kaggle.com/itzi97} \hfill \textit{2024}\\
-  Three end-to-end ML pipelines: alphanumeric character recognition (scikit-learn, data augmentation), spam detection (NLP, TF-IDF, feature engineering), and image classification Dogs vs.~Cats (CNN, Keras, transfer learning).
+  Three end-to-end ML pipelines: alphanumeric character recognition (scikit-learn, data augmentation),
+  spam detection (NLP, TF-IDF, feature engineering), and image classification (CNN, Keras, transfer learning).
 
   \item \textbf{Python Data Visualisation --- Fitness Analytics} --- \href{https://github.com/itzi97/DV_Python}{github.com/itzi97/DV\_Python} \hfill \textit{2024}\\
-  Time-series performance dashboard with pandas, matplotlib, seaborn and Plotly; includes data cleaning, aggregation and trend analysis.
+  Time-series performance dashboard with pandas, matplotlib, seaborn, Plotly and ipywidgets;
+  includes data cleaning, aggregation, interactive widgets and trend analysis.
 
   \item \textbf{Tableau Dashboard --- US Firearm Homicides} --- \href{https://github.com/itzi97/DV_Tableau}{github.com/itzi97/DV\_Tableau} \hfill \textit{2024}\\
-  Interactive regional and temporal visualisations built in Tableau from raw CSV data; end-to-end data cleaning and storytelling.
+  Interactive regional and temporal visualisations built in Tableau from raw CSV data;
+  end-to-end data cleaning and narrative storytelling.
 
   \item \textbf{AD-ODM --- Python Object-Document Mapper} --- \href{https://github.com/itzi97/AD-ODM}{github.com/itzi97/AD-ODM} \hfill \textit{2024}\\
-  Lightweight ODM for MongoDB and Redis (pymongo, redis-py) with custom serialisation; reduces boilerplate for NoSQL data access layers.
+  Lightweight ODM for MongoDB and Redis (pymongo, redis-py) with custom serialisation;
+  reduces boilerplate for NoSQL data access layers.
 
   \item \textbf{Distributed Systems \& Containerisation} --- \href{https://github.com/itzi97/DS_exercise1_fm}{github.com/itzi97/DS\_exercise1\_fm} \hfill \textit{2023}\\
-  C++ distributed services deployed with Docker and Kubernetes; covers concurrency, messaging protocols, and container orchestration.
+  C++ distributed services deployed with Docker and Kubernetes;
+  covers concurrency, messaging protocols, and container orchestration.
 
 \end{itemize}
 }
@@ -106,10 +115,12 @@ Data Engineering \& AI student (B.S.~Software Engineering, minor Data Science \&
 \begin{itemize}
 
   \item \textbf{Video Editor \& Content Creator} --- Paradox Interactive \hfill \textit{2024 | Remote}\\
-  Produced and edited data-driven strategy game guides published on official Paradox YouTube channels; collaborated asynchronously with international marketing teams.
+  Produced and edited strategy game guides published on official Paradox YouTube channels;
+  collaborated asynchronously with international marketing teams.
 
   \item \textbf{Private Tutor --- Mathematics \& Programming} --- Self-employed \hfill \textit{2020--2021}\\
-  Delivered one-on-one tutoring in calculus, algebra and Python/programming fundamentals; designed custom learning curricula and tracked student progress.
+  One-on-one tutoring in calculus, algebra and Python/programming fundamentals;
+  designed custom curricula and tracked student progress.
 
 \end{itemize}
 }
@@ -120,7 +131,7 @@ Data Engineering \& AI student (B.S.~Software Engineering, minor Data Science \&
 \begin{itemize}
 
   \item \textbf{B.S. Software Engineering}, minor Data Science \& AI --- U-tad, Madrid \hfill \textit{2025--2027 (exp.)}\\
-  GPA 8.05/10 (\textbf{8.64/10} past 2 years) \textbar\ 3 Honors distinctions \textbar\
+  GPA 8.05/10 (\textbf{8.64/10} past 2 years) \textbar\ 3 Honors distinctions \\
   Relevant courses: Machine Learning I \& II, Data Engineering Projects, Information Retrieval \& Analysis,
   Advanced Databases, Distributed Systems, Data Visualisation, Computer Vision, AI, Data Processing.
 
@@ -140,8 +151,7 @@ Data Engineering \& AI student (B.S.~Software Engineering, minor Data Science \&
   \textbf{Spoken languages} &
     Spanish (Native) \textbar\ English (Bilingual, C2) \textbar\ French (Intermediate, B1) \\
   \textbf{Music} &
-    ABRSM Grade 8 Piano (2013) \textbar\ ABRSM Grade 8 Violoncello (2012)
-    --- demonstrates long-term discipline and structured practice \\
+    ABRSM Grade 8 Piano (2013) \textbar\ ABRSM Grade 8 Violoncello (2012) \\
 \end{tabularx}
 }
 
@@ -155,7 +165,7 @@ Data Engineering \& AI student (B.S.~Software Engineering, minor Data Science \&
   \textbf{Availability} &
     20~hrs/week part-time; CET timezone; async-first, scheduled syncs welcome \\
   \textbf{Relocation} &
-    Planning move to Canada (Sep 2027) for M.Sc. Management in AI \& Analytics
+    Planning move to Canada (Sep 2027) for M.Sc.\ Management in AI \& Analytics
     (DeGroote School of Business) \\
 \end{tabularx}
 }
