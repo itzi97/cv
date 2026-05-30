@@ -5,9 +5,10 @@
 \documentclass[10pt,a4paper]{article}
 
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+\usepackage[utf8]{inputenc}   % handles all Spanish chars natively via UTF-8
 \usepackage{lmodern}
-\usepackage[spanish]{babel}
+% Note: babel[spanish] removed -- requires separate texlive-lang-spanish package.
+% UTF-8 inputenc + T1 fontenc is sufficient for all accented characters here.
 \usepackage[margin=1.4cm, top=1.2cm, bottom=1.2cm]{geometry}
 \usepackage{enumitem}
 \usepackage{hyperref}
@@ -32,7 +33,7 @@
 
 \begin{document}
 
-% ── Encabezado ────────────────────────────────────────────────────────────────
+% ── Encabezado
 {\LARGE\bfseries Itziar Morales Rodr\'{i}guez}\hfill
 {\small itzimr97@pm.me \textbar\ +34 669 076 611 \textbar\ Madrid, Espa\~{n}a}\\
 {\small
@@ -42,7 +43,7 @@
 }
 \vspace{5pt}\hrule\vspace{7pt}
 
-% ── Perfil ────────────────────────────────────────────────────────────────────
+% ── Perfil
 {\small
 Estudiante de Ingenier\'ia de Datos e IA (Grado en Ingenier\'ia del Software, minor en Ciencia de Datos e IA,
 U-tad, prev.\ 2027; media 8{,}05/10) con experiencia pr\'actica en pipelines de datos en Python, bases de
@@ -52,7 +53,7 @@ Ingenier\'ia de Datos o IA Aplicada.
 }
 \vspace{5pt}
 
-% ── Habilidades Técnicas ──────────────────────────────────────────────────────
+% ── Habilidades Técnicas
 \section{Habilidades T\'{e}cnicas}
 {\small
 \begin{tabularx}{\linewidth}{@{} l X @{}}
@@ -73,7 +74,7 @@ Ingenier\'ia de Datos o IA Aplicada.
 \end{tabularx}
 }
 
-% ── Proyectos Destacados ──────────────────────────────────────────────────────
+% ── Proyectos Destacados
 \section{Proyectos Destacados}
 {\small
 \begin{itemize}
@@ -106,7 +107,7 @@ Ingenier\'ia de Datos o IA Aplicada.
 \end{itemize}
 }
 
-% ── Experiencia Laboral ───────────────────────────────────────────────────────
+% ── Experiencia Laboral
 \section{Experiencia Laboral}
 {\small
 \begin{itemize}
@@ -122,7 +123,7 @@ Ingenier\'ia de Datos o IA Aplicada.
 \end{itemize}
 }
 
-% ── Formación Académica ───────────────────────────────────────────────────────
+% ── Formación Académica
 \section{Formaci\'on Acad\'emica}
 {\small
 \begin{itemize}
@@ -140,7 +141,7 @@ Ingenier\'ia de Datos o IA Aplicada.
 \end{itemize}
 }
 
-% ── Certificaciones & Idiomas ────────────────────────────────────────────────
+% ── Certificaciones & Idiomas
 \section{Certificaciones \& Idiomas}
 {\small
 \begin{tabularx}{\linewidth}{@{} l X @{}}
@@ -153,7 +154,7 @@ Ingenier\'ia de Datos o IA Aplicada.
 \end{tabularx}
 }
 
-% ── Información Adicional ─────────────────────────────────────────────────────
+% ── Información Adicional
 \section{Informaci\'on Adicional}
 {\small
 \begin{tabularx}{\linewidth}{@{} l X @{}}
