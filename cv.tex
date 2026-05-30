@@ -22,10 +22,15 @@
 \setlength{\parskip}{0pt}
 \setlength{\parindent}{0pt}
 
+% Section style: more breathing room above and below rule
 \titleformat{\section}{\bfseries\scshape\normalsize}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{8pt}{4pt}
+\titlespacing{\section}{0pt}{10pt}{5pt}
 
-\setlist[itemize]{leftmargin=1em, itemsep=2pt, topsep=2pt, parsep=0pt}
+% List style: more separation between items
+\setlist[itemize]{leftmargin=1em, itemsep=3pt, topsep=3pt, parsep=0pt}
+
+% Extra row padding in tabularx tables
+\renewcommand{\arraystretch}{1.25}
 
 \begin{document}
 
@@ -36,7 +41,7 @@
   \href{https://www.linkedin.com/in/itzi97}{linkedin.com/in/itzi97} \textbar\
   \href{https://www.kaggle.com/itzi97}{kaggle.com/itzi97}
 }
-\vspace{4pt}\hrule\vspace{6pt}
+\vspace{5pt}\hrule\vspace{7pt}
 
 {\small
 Data Engineering \& AI student (B.S.~Software Engineering, minor Data Science \& AI, U-tad, exp.\ 2027;
@@ -45,7 +50,7 @@ GPA 8.05/10) with hands-on experience in Python data pipelines, SQL/NoSQL databa
 Bilingual EN/ES (CEFR C2). Seeking a remote or hybrid part-time internship (\textasciitilde20~hrs/week)
 in Data Analytics, Data Engineering, or Applied AI.
 }
-\vspace{4pt}
+\vspace{5pt}
 
 \section{Technical Skills}
 {\small
@@ -62,7 +67,7 @@ in Data Analytics, Data Engineering, or Applied AI.
   \textbf{Infra \& DevOps} &
     Docker, Kubernetes, AWS (basics), Linux/NixOS, Git/GitHub \\
   \textbf{Other} &
-    REST API design, JWT auth, Jest (unit testing), Postman, LaTeX, Agile/Scrum basics \\
+    REST API design, JWT auth, Jest (unit testing), Postman, \LaTeX, Agile/Scrum basics \\
 \end{tabularx}
 }
 
