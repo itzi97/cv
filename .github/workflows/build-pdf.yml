@@ -7,6 +7,9 @@ on:
       - 'cv_es.tex'
   workflow_dispatch:
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,7 +26,8 @@ jobs:
             texlive-latex-recommended \
             texlive-latex-extra \
             texlive-fonts-recommended \
-            texlive-fonts-extra
+            texlive-fonts-extra \
+            texlive-lang-spanish
 
       - name: Compile English CV
         run: |
