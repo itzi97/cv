@@ -35,7 +35,7 @@ jobs:
           pdflatex -interaction=nonstopmode cv_es.tex
           pdflatex -interaction=nonstopmode cv_es.tex
 
-      - name: Commit PDFs back to this repo
+      - name: Commit PDFs back to CV repo
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -44,3 +44,26 @@ jobs:
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout portfolio repo
+        uses: actions/checkout@v4
+        with:
+          repository: itzi97/my-portfolio
+          token: ${{ secrets.PORTFOLIO_TOKEN }}
+          path: portfolio
+
+      - name: Copy PDFs to portfolio public/
+        run: |
+          cp cv.pdf     portfolio/public/itziar-morales-cv.pdf
+          cp cv_es.pdf  portfolio/public/itziar-morales-cv-es.pdf
+
+      - name: Commit & push PDFs to portfolio
+        run: |
+          cd portfolio
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/itziar-morales-cv.pdf public/itziar-morales-cv-es.pdf
+          git diff --cached --quiet || git commit -m "ci: sync CV PDFs from cv repo [skip ci]"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.PORTFOLIO_TOKEN }}
