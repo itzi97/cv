@@ -5,6 +5,7 @@ on:
     paths:
       - 'cv.tex'
       - 'cv_es.tex'
+      - 'cv_plain.tex'
   workflow_dispatch:
 
 env:
@@ -43,11 +44,16 @@ jobs:
           pdflatex -interaction=nonstopmode cv_es.tex
           pdflatex -interaction=nonstopmode cv_es.tex
 
+      - name: Compile Plain CV
+        run: |
+          pdflatex -interaction=nonstopmode cv_plain.tex
+          pdflatex -interaction=nonstopmode cv_plain.tex
+
       - name: Commit PDFs back to CV repo
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add cv.pdf cv_es.pdf
+          git add cv.pdf cv_es.pdf cv_plain.pdf
           git diff --cached --quiet || git commit -m "ci: rebuild CV PDFs [skip ci]"
           git push
         env:
