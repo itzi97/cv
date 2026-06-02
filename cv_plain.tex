@@ -1,6 +1,6 @@
 % ─────────────────────────────────────────────────────────────────────────────
 % Itziar Morales Rodríguez — CV (Data Analytics / Data Engineering / AI)
-% Plain version: no hyperlinks, no interactive elements
+% Plain version: no hyperlinks, no interactive elements, no PDF metadata
 % ATS-optimised: single-column sections, clean text, keyword-rich
 % ─────────────────────────────────────────────────────────────────────────────
 \documentclass[10pt,a4paper]{article}
@@ -15,6 +15,31 @@
 \usepackage{parskip}
 \usepackage{tabularx}
 \usepackage{array}
+
+% Explicitly load hyperref with ALL interactive features disabled
+\usepackage[
+  draft=false,
+  pdftex,
+  bookmarks=false,
+  bookmarksopen=false,
+  pdfborder={0 0 0},
+  colorlinks=false,
+  hidelinks,
+  hyperfootnotes=false,
+  hyperindex=false,
+  pageanchor=false,
+  plainpages=false,
+  pdfpagelabels=false,
+  pdftitle={},
+  pdfauthor={},
+  pdfsubject={},
+  pdfkeywords={},
+  pdfcreator={},
+  pdfproducer={}
+]{hyperref}
+
+% Strip all remaining PDF annotations and navigation
+\hypersetup{pdfstartview={}}
 
 \pagestyle{empty}
 \setlength{\parskip}{0pt}
@@ -65,7 +90,7 @@ Bilingual EN/ES (CEFR C2). Seeking an internship in Data Analytics, Data Enginee
   \textbf{Infra \& DevOps} &
     Docker, Kubernetes, AWS (basics), Linux/NixOS, Git/GitHub \\
   \textbf{Other} &
-    REST API design, JWT auth, Jest (unit testing), Postman, \LaTeX, Agile/Scrum basics \\
+    REST API design, JWT auth, Jest (unit testing), Postman, LaTeX, Agile/Scrum basics \\
 \end{tabularx}
 }
 
