@@ -60,6 +60,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Checkout portfolio repo
+        if: github.ref == 'refs/heads/main'
         uses: actions/checkout@v4
         with:
           repository: itzi97/my-portfolio
@@ -67,11 +68,13 @@ jobs:
           path: portfolio
 
       - name: Copy PDFs to portfolio public/
+        if: github.ref == 'refs/heads/main'
         run: |
           cp cv.pdf     portfolio/public/itziar-morales-cv.pdf
           cp cv_es.pdf  portfolio/public/itziar-morales-cv-es.pdf
 
       - name: Commit & push PDFs to portfolio
+        if: github.ref == 'refs/heads/main'
         run: |
           cd portfolio
           git config user.name  "github-actions[bot]"
