@@ -23,13 +23,14 @@
 \setlength{\parindent}{0pt}
 
 \titleformat{\section}{\bfseries\scshape\normalsize}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{8pt}{4pt}
+\titlespacing{\section}{0pt}{5pt}{3pt}
 
-\setlist[itemize]{leftmargin=1em, itemsep=2pt, topsep=2pt, parsep=0pt}
+\setlist[itemize]{leftmargin=1em, itemsep=1.5pt, topsep=1.5pt, parsep=0pt}
 
 \renewcommand{\arraystretch}{1.08}
 
 \begin{document}
+\enlargethispage{1\baselineskip}
 
 % ── Header
 {\LARGE\bfseries Itziar Morales Rodr\'{i}guez}\hfill
@@ -48,7 +49,8 @@
 Data Engineering \& AI student (B.S.~Software Engineering, minor Data Science \& AI, U-tad, exp.\ 2027;
 GPA 8.05/10) with hands-on experience in Python data pipelines, SQL/NoSQL databases, big data processing
 (Hadoop, Spark/Scala), machine learning, and interactive data visualisation.
-Bilingual EN/ES (CEFR C2). Currently interning as a Data Analytics Intern at MGA (finance data team).
+Bilingual EN/ES (CEFR C2). Currently a Data Analytics Intern at MGA, driving a sales/finance
+digital transformation --- relational schema design, data-integrity engineering, and Power~BI analytics.
 }
 \vspace{3pt}
 
@@ -109,11 +111,13 @@ Bilingual EN/ES (CEFR C2). Currently interning as a Data Analytics Intern at MGA
 {\small
 \begin{itemize}
 
-  \item \textbf{Data Analytics Intern} --- MGA (Sales Dept., Academy) \hfill \textit{Jul--Sep 2026 | Remote}\\
-  Contributing to a business intelligence web platform delivering game-performance metrics and KPIs to clients.
-  Analysing and exploiting game data; developing Power~BI reports and interactive visualisations;
-  applying statistical analysis and predictive models; supporting automation of analytics pipelines
-  and data-to-decision workflows. Stack: Java~21/Spring~Boot, Python, PostgreSQL, Power~BI, Docker, GitLab.
+  \item \textbf{Data Analytics Intern} --- MGA (Sales Dept.) \hfill \textit{Jul--Sep 2026 | Remote}\\
+  Contributing to \textit{Meridian}, a company-wide digital transformation replacing spreadsheet workflows
+  with a centralised PostgreSQL + Java~21/Spring~Boot platform. Designed a normalised sales/finance schema
+  over 10 tracked iterations, consolidating 1 database and 4 legacy spreadsheets into a single source of truth;
+  built a double-entry balance ledger with database-enforced integrity constraints and a safe historical-load
+  procedure guarding backfills against corruption. Also developed Power~BI reports and predictive models and ran
+  stakeholder validation with account-management teams. Stack: Java~21/Spring~Boot, Python, PostgreSQL, Power~BI, Docker, GitLab.
 
   \item \textbf{Video Editor \& Content Creator} --- Paradox Interactive \hfill \textit{2024 | Remote}\\
   Produced and edited strategy game guides published on official Paradox YouTube channels;

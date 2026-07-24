@@ -46,13 +46,14 @@
 \setlength{\parindent}{0pt}
 
 \titleformat{\section}{\bfseries\scshape\normalsize}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{8pt}{4pt}
+\titlespacing{\section}{0pt}{5pt}{3pt}
 
-\setlist[itemize]{leftmargin=1em, itemsep=2pt, topsep=2pt, parsep=0pt}
+\setlist[itemize]{leftmargin=1em, itemsep=1.5pt, topsep=1.5pt, parsep=0pt}
 
 \renewcommand{\arraystretch}{1.08}
 
 \begin{document}
+\enlargethispage{1\baselineskip}
 
 % ── Header
 {\LARGE\bfseries Itziar Morales Rodr\'{i}guez}\hfill
@@ -70,7 +71,8 @@
 Data Engineering \& AI student (B.S.~Software Engineering, minor Data Science \& AI, U-tad, exp.\ 2027;
 GPA 8.05/10) with hands-on experience in Python data pipelines, SQL/NoSQL databases, big data processing
 (Hadoop, Spark/Scala), machine learning, and interactive data visualisation.
-Bilingual EN/ES (CEFR C2). Seeking an internship in Data Analytics, Data Engineering, or Applied AI.
+Bilingual EN/ES (CEFR C2). Currently a Data Analytics Intern at MGA, driving a sales/finance
+digital transformation --- relational schema design, data-integrity engineering, and Power BI analytics.
 }
 \vspace{3pt}
 
@@ -79,16 +81,16 @@ Bilingual EN/ES (CEFR C2). Seeking an internship in Data Analytics, Data Enginee
 {\small
 \begin{tabularx}{\linewidth}{@{} l X @{}}
   \textbf{Languages} &
-    Python, SQL, Go, Rust, JavaScript/Node.js, C/C++, Java, Scala, Bash \\
+    Python, SQL, Java, Go, Rust, JavaScript/Node.js, C/C++, Scala, Bash \\
   \textbf{Data \& ML} &
     pandas, NumPy, scikit-learn, TensorFlow/Keras, matplotlib, seaborn,
-    Plotly, ipywidgets, Tableau, NLP, TF-IDF, CNN, transfer learning, feature engineering \\
+    Plotly, ipywidgets, Tableau, Power BI, NLP, TF-IDF, CNN, transfer learning, feature engineering \\
   \textbf{Big Data} &
     Apache Hadoop, Apache Spark (Scala), MapReduce, distributed data processing \\
   \textbf{Databases} &
     PostgreSQL, MongoDB, Redis, Apache Cassandra, ChromaDB (vector store), distributed query optimisation \\
   \textbf{Infra \& DevOps} &
-    Docker, Kubernetes, AWS (basics), Linux/NixOS, Git/GitHub \\
+    Docker, Kubernetes, AWS (basics), Linux/NixOS, Git/GitHub/GitLab \\
   \textbf{Other} &
     REST API design, JWT auth, Jest (unit testing), Postman, LaTeX, Agile/Scrum basics \\
 \end{tabularx}
@@ -130,6 +132,14 @@ Bilingual EN/ES (CEFR C2). Seeking an internship in Data Analytics, Data Enginee
 \section{Work Experience}
 {\small
 \begin{itemize}
+
+  \item \textbf{Data Analytics Intern} --- MGA (Sales Dept.) \hfill \textit{Jul--Sep 2026 | Remote}\\
+  Contributing to \textit{Meridian}, a company-wide digital transformation replacing spreadsheet workflows
+  with a centralised PostgreSQL + Java 21/Spring Boot platform. Designed a normalised sales/finance schema
+  over 10 tracked iterations, consolidating 1 database and 4 legacy spreadsheets into a single source of truth;
+  built a double-entry balance ledger with database-enforced integrity constraints and a safe historical-load
+  procedure guarding backfills against corruption. Also developed Power BI reports and predictive models and ran
+  stakeholder validation with account-management teams. Stack: Java 21/Spring Boot, Python, PostgreSQL, Power BI, Docker, GitLab.
 
   \item \textbf{Video Editor \& Content Creator} --- Paradox Interactive \hfill \textit{2024 | Remote}\\
   Produced and edited strategy game guides published on official Paradox YouTube channels;
@@ -174,15 +184,6 @@ Bilingual EN/ES (CEFR C2). Seeking an internship in Data Analytics, Data Enginee
     Spanish (Native) \textbar\ English (Bilingual, C2) \textbar\ French (Intermediate, B1) \\
   \textbf{Music} &
     ABRSM Grade 8 Piano (2013) \textbar\ ABRSM Grade 8 Violoncello (2012) \\
-\end{tabularx}
-}
-
-% ── Additional
-\section{Additional}
-{\small
-\begin{tabularx}{\linewidth}{@{} l X @{}}
-  \textbf{Academic Goal} &
-    M.Sc.\ in Management in AI \& Analytics (Sep.\ 2027) \\
 \end{tabularx}
 }
 
