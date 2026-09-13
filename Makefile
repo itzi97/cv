@@ -1,19 +1,17 @@
-# Build all CV PDFs (English, Spanish, Plain)
-all: cv.pdf cv_es.pdf cv_plain.pdf
+# Generic CVs for job applications — English, Spanish, and a plain (link-free) English for parsers.
+JOBS := jobs/cv.pdf jobs/cv_es.pdf jobs/cv_plain.pdf
 
-cv.pdf: cv.tex
-	pdflatex cv.tex
-	pdflatex cv.tex
+all: $(JOBS)
 
-cv_es.pdf: cv_es.tex
-	pdflatex cv_es.tex
-	pdflatex cv_es.tex
+%.pdf: %.tex
+	cd $(dir $<) && pdflatex -interaction=nonstopmode $(notdir $<) && pdflatex -interaction=nonstopmode $(notdir $<)
 
-cv_plain.pdf: cv_plain.tex
-	pdflatex cv_plain.tex
-	pdflatex cv_plain.tex
+check: all
+	@for f in $(JOBS); do \
+	  if pdftotext "$$f" - | grep -q -i -E 'paradox|8\.05|8\.64|8\.61|8,61|computational'; then echo "STALE STRING IN $$f"; exit 1; fi; \
+	done; echo "check: no stale strings in any PDF"
 
 clean:
-	rm -f cv.aux cv.log cv.out cv.pdf
-	rm -f cv_es.aux cv_es.log cv_es.out cv_es.pdf
-	rm -f cv_plain.aux cv_plain.log cv_plain.out cv_plain.pdf
+	rm -f jobs/*.aux jobs/*.log jobs/*.out
+
+.PHONY: all check clean

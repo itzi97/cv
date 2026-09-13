@@ -5,3 +5,8 @@
 *.toc
 *.fls
 *.fdb_latexmk
+
+# LibreOffice leftovers
+.~lock.*
+*.tmp
+_to_delete/

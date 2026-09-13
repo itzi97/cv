@@ -1,5 +1,6 @@
 % ─────────────────────────────────────────────────────────────────────────────
 % Itziar Morales Rodríguez — CV (Data Analytics / Data Engineering / AI)
+% Plain version: no hyperlinks, no interactive elements, no PDF metadata
 % ATS-optimised: single-column sections, clean text, keyword-rich
 % ─────────────────────────────────────────────────────────────────────────────
 \documentclass[10pt,a4paper]{article}
@@ -9,14 +10,36 @@
 \usepackage{lmodern}
 \usepackage[margin=1.4cm, top=1.2cm, bottom=1.0cm]{geometry}
 \usepackage{enumitem}
-\usepackage{hyperref}
 \usepackage{titlesec}
 \usepackage{multicol}
 \usepackage{parskip}
 \usepackage{tabularx}
 \usepackage{array}
 
-\hypersetup{colorlinks=true, urlcolor=black, linkcolor=black, hidelinks}
+% Explicitly load hyperref with ALL interactive features disabled
+\usepackage[
+  draft=false,
+  pdftex,
+  bookmarks=false,
+  bookmarksopen=false,
+  pdfborder={0 0 0},
+  colorlinks=false,
+  hidelinks,
+  hyperfootnotes=false,
+  hyperindex=false,
+  pageanchor=false,
+  plainpages=false,
+  pdfpagelabels=false,
+  pdftitle={},
+  pdfauthor={},
+  pdfsubject={},
+  pdfkeywords={},
+  pdfcreator={},
+  pdfproducer={}
+]{hyperref}
+
+% Strip all remaining PDF annotations and navigation
+\hypersetup{pdfstartview={}}
 
 \pagestyle{empty}
 \setlength{\parskip}{0pt}
@@ -35,11 +58,10 @@
 {\LARGE\bfseries Itziar Morales}\hfill
 {\small itzimr97@pm.me \textbar\ +34 669 076 611 \textbar\ Madrid, Spain}\\
 {\small
-  % Links
-  \href{https://itziar.dev}{itziar.dev} \textbar\
-  \href{https://github.com/itzi97}{github.com/itzi97} \textbar\
-  \href{https://www.linkedin.com/in/itzi97}{linkedin.com/in/itzi97} \textbar\
-  \href{https://www.kaggle.com/itzi97}{kaggle.com/itzi97}
+  itziar.dev \textbar\
+  github.com/itzi97 \textbar\
+  linkedin.com/in/itzi97 \textbar\
+  kaggle.com/itzi97
 }
 \vspace{3pt}\hrule\vspace{5pt}
 
@@ -50,7 +72,7 @@ GPA 8.07/10) with hands-on experience in Python data pipelines, SQL/NoSQL databa
 (Hadoop, Spark/Scala), machine learning, and interactive data visualisation.
 Bilingual EN/ES (CEFR C2). Currently a Data Analytics \& Engineering Intern at MGA, modernising legacy
 business workflows into a centralised relational data platform --- schema design, data-integrity
-engineering, and Power~BI analytics.
+engineering, and Power BI analytics.
 }
 \vspace{3pt}
 
@@ -62,7 +84,7 @@ engineering, and Power~BI analytics.
     Python, SQL, Java, Go, Rust, JavaScript/Node.js, C/C++, Scala, Bash \\
   \textbf{Data \& ML} &
     pandas, NumPy, scikit-learn, TensorFlow/Keras, matplotlib, seaborn,
-    Plotly, ipywidgets, Tableau, Power~BI, NLP, TF-IDF, CNN, transfer learning, feature engineering \\
+    Plotly, ipywidgets, Tableau, Power BI, NLP, TF-IDF, CNN, transfer learning, feature engineering \\
   \textbf{Big Data} &
     Apache Hadoop, Apache Spark (Scala), MapReduce, distributed data processing \\
   \textbf{Databases} &
@@ -70,7 +92,7 @@ engineering, and Power~BI analytics.
   \textbf{Infra \& DevOps} &
     Docker, Kubernetes, AWS (basics), Linux/NixOS, Git/GitHub/GitLab \\
   \textbf{Other} &
-    REST API design, JWT auth, Jest (unit testing), Postman, \LaTeX, Agile/Scrum basics \\
+    REST API design, JWT auth, Jest (unit testing), Postman, LaTeX, Agile/Scrum basics \\
 \end{tabularx}
 }
 
@@ -79,27 +101,27 @@ engineering, and Power~BI analytics.
 {\small
 \begin{itemize}
 
-  \item \textbf{ML Classification Suite} --- \href{https://www.kaggle.com/itzi97}{kaggle.com/itzi97} \hfill \textit{2025}\\
+  \item \textbf{ML Classification Suite} --- kaggle.com/itzi97 \hfill \textit{2025}\\
   Three end-to-end ML pipelines: alphanumeric character recognition (scikit-learn, data augmentation),
   spam detection (NLP, TF-IDF, feature engineering), and image classification (CNN, Keras, transfer learning).
 
-  \item \textbf{Python Data Visualisation --- Fitness Analytics} --- \href{https://github.com/itzi97/DV_Python}{github.com/itzi97/DV\_Python} \hfill \textit{2026}\\
+  \item \textbf{Python Data Visualisation --- Fitness Analytics} --- github.com/itzi97/DV\_Python \hfill \textit{2026}\\
   Time-series performance dashboard with pandas, matplotlib, seaborn, Plotly and ipywidgets;
   includes data cleaning, aggregation, interactive widgets and trend analysis.
 
-  \item \textbf{Tableau Dashboard --- US Firearm Homicides} --- \href{https://github.com/itzi97/DV_Tableau}{github.com/itzi97/DV\_Tableau} \hfill \textit{2026}\\
+  \item \textbf{Tableau Dashboard --- US Firearm Homicides} --- github.com/itzi97/DV\_Tableau \hfill \textit{2026}\\
   Interactive regional and temporal visualisations built in Tableau from raw CSV data;
   end-to-end data cleaning and narrative storytelling.
 
-  \item \textbf{BildyApp --- REST API Backend} --- \href{https://github.com/itzi97/wpii-bildyapp}{github.com/itzi97/wpii-bildyapp} \hfill \textit{2026}\\
+  \item \textbf{BildyApp --- REST API Backend} --- github.com/itzi97/wpii-bildyapp \hfill \textit{2026}\\
   Production-structured Node.js/Express API managing clients, projects and certifications;
   JWT auth, role-based access control, Jest unit tests, Postman collection, Dockerised deployment.
 
-  \item \textbf{AD-ODM --- Python Object-Document Mapper} --- \href{https://github.com/itzi97/AD-ODM}{github.com/itzi97/AD-ODM} \hfill \textit{2025}\\
+  \item \textbf{AD-ODM --- Python Object-Document Mapper} --- github.com/itzi97/AD-ODM \hfill \textit{2025}\\
   Lightweight ODM for MongoDB and Redis (pymongo, redis-py) with custom serialisation;
   reduces boilerplate for NoSQL data access layers.
 
-  \item \textbf{Distributed Systems \& Containerisation} --- \href{https://github.com/itzi97/DS_exercise1_fm}{github.com/itzi97/DS\_exercise1\_fm} \hfill \textit{2025}\\
+  \item \textbf{Distributed Systems \& Containerisation} --- github.com/itzi97/DS\_exercise1\_fm \hfill \textit{2025}\\
   C++ distributed services deployed with Docker and Kubernetes;
   covers concurrency, messaging protocols, and container orchestration.
 
@@ -111,12 +133,12 @@ engineering, and Power~BI analytics.
 {\small
 \begin{itemize}
 
-  \item \textbf{Data Analytics \& Engineering Intern} --- MGA \hfill \textit{Jul--Sep 2026 | Remote}\\
-  Migrating legacy spreadsheet-based workflows to a centralised PostgreSQL + Java~21/Spring~Boot platform.
+  \item \textbf{Data Analytics \& Engineering Intern} --- MGA \hfill \textit{Jul 2026--present | Remote}\\
+  Full-time over the summer, part-time alongside the final year of the degree. Migrating legacy spreadsheet-based workflows to a centralised PostgreSQL + Java 21/Spring Boot platform.
   Designed normalised relational schemas as a single source of truth, built a transactional ledger with
   database-enforced integrity constraints, and engineered safe data-migration procedures that prevent
-  corruption during historical backfills. Also developed Power~BI reports and predictive models and validated
-  designs with business stakeholders. Stack: Java~21/Spring~Boot, Python, PostgreSQL, Power~BI, Docker, GitLab.
+  corruption during historical backfills. Also developed Power BI reports and predictive models and validated
+  designs with business stakeholders. Stack: Java 21/Spring Boot, Python, PostgreSQL, Power BI, Docker, GitLab.
 
   \item \textbf{Private Tutor --- Mathematics \& Programming} --- Self-employed \hfill \textit{2020--2021}\\
   One-on-one tutoring in calculus, algebra and Python/programming fundamentals;
@@ -131,14 +153,14 @@ engineering, and Power~BI analytics.
 \begin{itemize}
 
   \item \textbf{B.S. Software Engineering}, minor Data Science \& AI --- U-tad, Madrid \hfill \textit{2025--2027 (exp.)}\\
-  GPA 8.07/10 (\textbf{8.61/10} past 2 years) \textbar\ 4 Honors distinctions \\
+  GPA 8.07/10 (\textbf{8.62/10} final two years) \textbar\ 4 Honors distinctions \\
   Relevant courses: Machine Learning I \& II, Data Engineering Projects, Information Retrieval \& Analysis,
   Advanced Databases, Distributed Systems, Data Visualisation, Computer Vision, AI, Data Processing.
 
   \item \textbf{Language Studies --- English} --- Escuela Oficial de Idiomas, Madrid \hfill \textit{2022--2024}\\
   Advanced English programme; preparation for CEFR C2 certification.
 
-  \item \textbf{B.S. Computational Mathematics \& CS}, minor Data Science \& AI --- U-tad \hfill \textit{2019--2022}\\
+  \item \textbf{Dual Degree in Mathematics \& Software Engineering} --- U-tad \hfill \textit{2019--2022}\\
   Pivoted to Software Engineering to deepen applied and systems-level expertise.
 
   \item \textbf{B.S. CS --- Real-Time Interactive Simulation} --- DigiPen Institute of Technology \hfill \textit{2015--2017}\\

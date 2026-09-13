@@ -3,9 +3,9 @@ name: Build & commit CV PDFs
 on:
   push:
     paths:
-      - 'cv.tex'
-      - 'cv_es.tex'
-      - 'cv_plain.tex'
+      - 'jobs/cv.tex'
+      - 'jobs/cv_es.tex'
+      - 'jobs/cv_plain.tex'
   workflow_dispatch:
 
 env:
@@ -34,26 +34,23 @@ jobs:
             texlive-lang-spanish \
             lmodern
 
-      - name: Compile English CV
+      - name: Compile job CVs (English, Spanish, plain)
         run: |
-          pdflatex -interaction=nonstopmode cv.tex
-          pdflatex -interaction=nonstopmode cv.tex
+          cd jobs
+          for f in cv cv_es cv_plain; do pdflatex -interaction=nonstopmode $f.tex && pdflatex -interaction=nonstopmode $f.tex; done
 
-      - name: Compile Spanish CV
+      - name: Refuse retired strings
         run: |
-          pdflatex -interaction=nonstopmode cv_es.tex
-          pdflatex -interaction=nonstopmode cv_es.tex
-
-      - name: Compile Plain CV
-        run: |
-          pdflatex -interaction=nonstopmode cv_plain.tex
-          pdflatex -interaction=nonstopmode cv_plain.tex
+          sudo apt-get install -y --no-install-recommends poppler-utils
+          for f in jobs/cv.pdf jobs/cv_es.pdf jobs/cv_plain.pdf; do
+            if pdftotext "$f" - | grep -q -i -E 'paradox|8\.05|8\.64|8\.61|8,61|computational'; then echo "stale string in $f"; exit 1; fi
+          done
 
       - name: Commit PDFs back to CV repo
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add cv.pdf cv_es.pdf cv_plain.pdf
+          git add jobs/cv.pdf jobs/cv_es.pdf jobs/cv_plain.pdf
           git diff --cached --quiet || git commit -m "ci: rebuild CV PDFs [skip ci]"
           git push
         env:
@@ -70,8 +67,8 @@ jobs:
       - name: Copy PDFs to portfolio public/
         if: github.ref == 'refs/heads/main'
         run: |
-          cp cv.pdf     portfolio/public/itziar-morales-cv.pdf
-          cp cv_es.pdf  portfolio/public/itziar-morales-cv-es.pdf
+          cp jobs/cv.pdf     portfolio/public/itziar-morales-cv.pdf
+          cp jobs/cv_es.pdf  portfolio/public/itziar-morales-cv-es.pdf
 
       - name: Commit & push PDFs to portfolio
         if: github.ref == 'refs/heads/main'
